@@ -1,7 +1,17 @@
 RailsMongoDbId::Application.routes.draw do
+  #get "users/show"
+
+#  get "home/index"
+
+	devise_for :users
+	root :to => "home#index"
+	devise_for :users
+	resources :users, :only => :show
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
-root :to => "home#index"
+#root :to => "home#index"
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
@@ -48,7 +58,7 @@ root :to => "home#index"
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+# root :to => "home#index"
 
   # See how all your routes lay out with "rake routes"
 
