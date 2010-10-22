@@ -2,3 +2,6 @@
 
 require ::File.expand_path('../config/environment',  __FILE__)
 run RailsMongoDbId::Application
+#config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+
